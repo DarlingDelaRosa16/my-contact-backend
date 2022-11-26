@@ -13,7 +13,7 @@ dbConnection()
 app.use(cors())
 
 // public
-//app.use(express.static('public'))
+app.use(express.static('public'))
 
 app.use(express.json());
 
