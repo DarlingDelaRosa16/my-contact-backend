@@ -5,7 +5,7 @@ const {setUpJWT} = require('../helpers/jwt')
 const newUser = async (req, res) => {
 
     const { email, password } = req.body;
-
+    
     try {
         let user = await User.findOne({ email })
 
@@ -100,6 +100,8 @@ const reNewToken = async(req, res) => {
     
     res.json({
         ok: true,
+        uid,
+        name,
         token
     })
 }
