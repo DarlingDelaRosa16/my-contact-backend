@@ -87,7 +87,7 @@ const deleteContact =async(req, res)=>{
         const contact = await Contact.findById(contactId)
 
         if (!contact) {
-            res.status(404).json({
+            return res.status(404).json({
                 ok:false,
                 msg:'Id contact is invalid'
             })
@@ -115,10 +115,6 @@ const deleteContact =async(req, res)=>{
         })
     }
     
-    res.json({
-        ok:true,
-        msg:'desde delete'
-    })
 }
 
 

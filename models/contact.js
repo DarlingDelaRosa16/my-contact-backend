@@ -20,7 +20,7 @@ const ContactSchema = Schema({
     email:{
         type: String,
         required:true,
-        unique:true
+        unique: true
     },
     socialMedia:{
         type: String,
