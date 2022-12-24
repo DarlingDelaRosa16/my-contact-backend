@@ -11,16 +11,14 @@ const ContactSchema = Schema({
     },
     phone:{
         type: String,
-        required: true,
-        unique:true
+        required: true
     },
     secondPhone:{
         type: String,
     },
     email:{
         type: String,
-        required:true,
-        unique: true
+        required:true
     },
     socialMedia:{
         type: String,

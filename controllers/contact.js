@@ -1,6 +1,5 @@
 const Contact = require('../models/contact')
 
-
 const getContacts = async(req, res)=>{
     
     const contacts = await Contact.find({contactBook: req.uid})
@@ -29,7 +28,7 @@ const newContact = async(req, res)=>{
         console.log(error)
         res.status(500).json({
             ok: false,
-            msg: 'Please talk whit the admin'
+            msg: 'Please talk whit the admin (Phone or Email Already exists)'
         })
     }
     
